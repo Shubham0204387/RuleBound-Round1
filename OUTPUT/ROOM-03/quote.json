@@ -1,0 +1,269 @@
+{
+  "blocking_reasons": [
+    "Layout is not valid."
+  ],
+  "currency": "INR",
+  "lines": [
+    {
+      "line_id": "LINE-0001",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0001",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0002",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0002",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0003",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0003",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0004",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0004",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0005",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0005",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0006",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0006",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0007",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0007",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0008",
+      "net_goods_inr": 23780,
+      "quantity": 1,
+      "sku": "NW-DES-009",
+      "trace": {
+        "calculation": "1 \u00d7 23780 = 23780",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0008",
+        "sku": "NW-DES-009"
+      },
+      "unit_list_price_inr": 23780
+    },
+    {
+      "line_id": "LINE-0009",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0009",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0010",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0010",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0011",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0011",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0012",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0012",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0013",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0013",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0014",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0014",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0015",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0015",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0016",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0016",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0017",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0017",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0018",
+      "net_goods_inr": 12925,
+      "quantity": 1,
+      "sku": "NW-CHA-006",
+      "trace": {
+        "calculation": "1 \u00d7 12925 = 12925",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0018",
+        "sku": "NW-CHA-006"
+      },
+      "unit_list_price_inr": 12925
+    },
+    {
+      "line_id": "LINE-0019",
+      "net_goods_inr": 26915,
+      "quantity": 1,
+      "sku": "NW-COL-002",
+      "trace": {
+        "calculation": "1 \u00d7 26915 = 26915",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0019",
+        "sku": "NW-COL-002"
+      },
+      "unit_list_price_inr": 26915
+    }
+  ],
+  "quote_id": "QUOTE-ROOM-03",
+  "room_id": "ROOM-03",
+  "status": "blocked",
+  "summary": {
+    "freight_inr": 0,
+    "grand_total_inr": 346405,
+    "labour_inr": 0
+  },
+  "summary_trace": [
+    {
+      "description": "Quote generated deterministically from committed catalog placements.",
+      "method": "deterministic_catalog_sum"
+    }
+  ]
+}

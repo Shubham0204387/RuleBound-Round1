@@ -1,0 +1,21 @@
+{
+  "blocking_reasons": [
+    "Layout is not valid."
+  ],
+  "currency": "INR",
+  "lines": [],
+  "quote_id": "QUOTE-ROOM-04",
+  "room_id": "ROOM-04",
+  "status": "blocked",
+  "summary": {
+    "freight_inr": 0,
+    "grand_total_inr": 0,
+    "labour_inr": 0
+  },
+  "summary_trace": [
+    {
+      "description": "Quote generated deterministically from committed catalog placements.",
+      "method": "deterministic_catalog_sum"
+    }
+  ]
+}

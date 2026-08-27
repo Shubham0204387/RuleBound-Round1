@@ -1,0 +1,196 @@
+{
+  "placements": [
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0001",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 600,
+      "y_mm": 1200
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0002",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 1800,
+      "y_mm": 1200
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0003",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 3000,
+      "y_mm": 1200
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0004",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 4200,
+      "y_mm": 1200
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0005",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 600,
+      "y_mm": 2100
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0006",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 1800,
+      "y_mm": 2100
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0007",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 340,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0008",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 940,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0009",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1540,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0010",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 2140,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0011",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3040,
+      "y_mm": 2700
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0012",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3640,
+      "y_mm": 2700
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0013",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 4240,
+      "y_mm": 2700
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0014",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 4840,
+      "y_mm": 2700
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0015",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3150,
+      "y_mm": 2140
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0016",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 340,
+      "y_mm": 3600
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0017",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3750,
+      "y_mm": 2140
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0018",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 4350,
+      "y_mm": 2140
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0019",
+      "rotation_deg": 0,
+      "sku": "NW-COL-002",
+      "x_mm": 2700,
+      "y_mm": 3300
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0020",
+      "rotation_deg": 0,
+      "sku": "NW-STO-018",
+      "x_mm": 4800,
+      "y_mm": 4800
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0021",
+      "rotation_deg": 0,
+      "sku": "NW-STO-018",
+      "x_mm": 6000,
+      "y_mm": 4800
+    }
+  ],
+  "room_id": "ROOM-01",
+  "status": "valid",
+  "violations": []
+}

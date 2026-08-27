@@ -1,0 +1,48 @@
+{
+  "blocking_reasons": [
+    "Layout is not valid."
+  ],
+  "currency": "INR",
+  "lines": [
+    {
+      "line_id": "LINE-0001",
+      "net_goods_inr": 26915,
+      "quantity": 1,
+      "sku": "NW-COL-002",
+      "trace": {
+        "calculation": "1 \u00d7 26915 = 26915",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0001",
+        "sku": "NW-COL-002"
+      },
+      "unit_list_price_inr": 26915
+    },
+    {
+      "line_id": "LINE-0002",
+      "net_goods_inr": 26915,
+      "quantity": 1,
+      "sku": "NW-COL-002",
+      "trace": {
+        "calculation": "1 \u00d7 26915 = 26915",
+        "method": "committed_placement_catalog_price",
+        "placement_id": "P-0002",
+        "sku": "NW-COL-002"
+      },
+      "unit_list_price_inr": 26915
+    }
+  ],
+  "quote_id": "QUOTE-ROOM-02",
+  "room_id": "ROOM-02",
+  "status": "blocked",
+  "summary": {
+    "freight_inr": 0,
+    "grand_total_inr": 53830,
+    "labour_inr": 0
+  },
+  "summary_trace": [
+    {
+      "description": "Quote generated deterministically from committed catalog placements.",
+      "method": "deterministic_catalog_sum"
+    }
+  ]
+}

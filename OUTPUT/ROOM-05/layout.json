@@ -1,0 +1,25 @@
+{
+  "placements": [
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0001",
+      "rotation_deg": 0,
+      "sku": "NW-COL-002",
+      "x_mm": 1200,
+      "y_mm": 600
+    },
+    {
+      "finish_id": "F01",
+      "paired_desk_id": null,
+      "placement_id": "P-0002",
+      "rotation_deg": 0,
+      "sku": "NW-COL-002",
+      "x_mm": 3000,
+      "y_mm": 600
+    }
+  ],
+  "room_id": "ROOM-05",
+  "status": "unsatisfiable",
+  "violations": []
+}
