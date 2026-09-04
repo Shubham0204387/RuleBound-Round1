@@ -73,15 +73,19 @@ def extract_desks(text, requirements):
 
     # Numeric desk positions
     match = re.search(
-        r"(\d+)\s+desk\s+positions?",
+        r"(twenty|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|"
+        r"thirteen|twelve|eleven|ten|nine|eight|seven|six|five|four|"
+        r"three|two|one|\d+)\s+desk\s+positions?",
         lower,
     )
 
     if match:
+        quantity = number_from_text(match.group(1))
+
         add_furniture(
             requirements,
             family="desk",
-            quantity=int(match.group(1)),
+            quantity=quantity,
             attributes=["work_position"],
             evidence_text=match.group(0),
         )
@@ -167,6 +171,22 @@ def extract_seating(text, requirements):
             quantity=quantity,
             attributes=["seating"],
             evidence_text=match.group(0),
+        )
+
+    # Generic chair fallback
+    if (
+        "chair" in lower
+        and not any(
+            item.family == "chair"
+            for item in requirements.furniture
+        )
+    ):
+        add_furniture(
+            requirements,
+            family="chair",
+            quantity=None,
+            attributes=["task"],
+            evidence_text="chairs",
         )
 
 

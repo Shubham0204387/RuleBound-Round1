@@ -1,5 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from app.layout.repair import Escalation
 
 
 @dataclass
@@ -77,6 +80,7 @@ class Layout:
     placements: List[Placement] = field(default_factory=list)
     violations: List[Violation] = field(default_factory=list)
     status: str = "invalid"
+    escalation: Optional["Escalation"] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -90,6 +94,11 @@ class Layout:
                 for violation in self.violations
             ],
             "status": self.status,
+            "escalation": (
+                self.escalation.to_dict()
+                if self.escalation is not None
+                else None
+            ),
         }
 
     def is_valid(self) -> bool:

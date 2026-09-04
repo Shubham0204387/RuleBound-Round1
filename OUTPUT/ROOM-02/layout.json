@@ -1,7 +1,8 @@
 {
+  "escalation": null,
   "placements": [
     {
-      "finish_id": "F01",
+      "finish_id": "F02",
       "paired_desk_id": null,
       "placement_id": "P-0001",
       "rotation_deg": 0,
@@ -10,16 +11,170 @@
       "y_mm": 600
     },
     {
-      "finish_id": "F01",
+      "finish_id": "F02",
       "paired_desk_id": null,
       "placement_id": "P-0002",
       "rotation_deg": 0,
       "sku": "NW-COL-002",
       "x_mm": 3000,
       "y_mm": 600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0003",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1200,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0004",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1800,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0005",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 2400,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0006",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3000,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0007",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3600,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0008",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 4200,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0009",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 4800,
+      "y_mm": 600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0010",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 4800,
+      "y_mm": 1200
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0011",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 4800,
+      "y_mm": 1800
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0012",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1200,
+      "y_mm": 2100
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0013",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1800,
+      "y_mm": 2100
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0014",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 2400,
+      "y_mm": 2100
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0015",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 5400,
+      "y_mm": 600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0016",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 5400,
+      "y_mm": 1200
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0017",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 5400,
+      "y_mm": 1800
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0018",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3000,
+      "y_mm": 2100
     }
   ],
   "room_id": "ROOM-02",
   "status": "unsatisfiable",
-  "violations": []
+  "violations": [
+    {
+      "affected_placement_ids": [],
+      "measured": {},
+      "message": "The brief does not provide enough information to safely infer a quantity.",
+      "repair_options": [],
+      "required": {},
+      "rule_id": "RB-REQ-001",
+      "violation_id": "V-UNRESOLVED-STORAGE"
+    }
+  ]
 }

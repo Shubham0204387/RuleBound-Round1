@@ -1,33 +1,81 @@
 {
   "blocking_reasons": [
-    "Layout is not valid."
+    "The brief does not provide enough information to safely infer a quantity."
   ],
   "currency": "INR",
   "lines": [
     {
+      "base_amount_inr": 206800,
+      "finish_id": "F02",
+      "finish_uplift_inr": 5170,
       "line_id": "LINE-0001",
-      "net_goods_inr": 26915,
-      "quantity": 1,
-      "sku": "NW-COL-002",
-      "trace": {
-        "calculation": "1 \u00d7 26915 = 26915",
-        "method": "committed_placement_catalog_price",
-        "placement_id": "P-0001",
-        "sku": "NW-COL-002"
-      },
-      "unit_list_price_inr": 26915
+      "net_goods_inr": 197494,
+      "quantity": 16,
+      "quantity_discount_inr": 14476,
+      "sku": "NW-CHA-006",
+      "trace": [
+        {
+          "amount_inr": 206800,
+          "inputs": {
+            "quantity": 16,
+            "unit_price": 12925
+          },
+          "rule_id": "CATALOG"
+        },
+        {
+          "amount_inr": 5170,
+          "inputs": {
+            "base_amount_inr": 206800,
+            "uplift_bps": 250
+          },
+          "rule_id": "RB-PRC-010"
+        },
+        {
+          "amount_inr": -14476,
+          "inputs": {
+            "base_amount_inr": 206800,
+            "discount_bps": 700
+          },
+          "rule_id": "RB-PRC-009"
+        }
+      ],
+      "unit_list_price_inr": 12925
     },
     {
+      "base_amount_inr": 53830,
+      "finish_id": "F02",
+      "finish_uplift_inr": 1346,
       "line_id": "LINE-0002",
-      "net_goods_inr": 26915,
-      "quantity": 1,
+      "net_goods_inr": 55176,
+      "quantity": 2,
+      "quantity_discount_inr": 0,
       "sku": "NW-COL-002",
-      "trace": {
-        "calculation": "1 \u00d7 26915 = 26915",
-        "method": "committed_placement_catalog_price",
-        "placement_id": "P-0002",
-        "sku": "NW-COL-002"
-      },
+      "trace": [
+        {
+          "amount_inr": 53830,
+          "inputs": {
+            "quantity": 2,
+            "unit_price": 26915
+          },
+          "rule_id": "CATALOG"
+        },
+        {
+          "amount_inr": 1346,
+          "inputs": {
+            "base_amount_inr": 53830,
+            "uplift_bps": 250
+          },
+          "rule_id": "RB-PRC-010"
+        },
+        {
+          "amount_inr": 0,
+          "inputs": {
+            "base_amount_inr": 53830,
+            "discount_bps": 0
+          },
+          "rule_id": "RB-PRC-009"
+        }
+      ],
       "unit_list_price_inr": 26915
     }
   ],
@@ -35,14 +83,30 @@
   "room_id": "ROOM-02",
   "status": "blocked",
   "summary": {
-    "freight_inr": 0,
-    "grand_total_inr": 53830,
-    "labour_inr": 0
+    "freight_inr": 10107,
+    "goods_after_adjustments_inr": 252670,
+    "grand_total_inr": 267017,
+    "labour_inr": 4240,
+    "labour_minutes": 318,
+    "labour_rate_inr_per_hour": 800
   },
   "summary_trace": [
     {
-      "description": "Quote generated deterministically from committed catalog placements.",
-      "method": "deterministic_catalog_sum"
+      "amount_inr": 4240,
+      "inputs": {
+        "labour_rate_inr_per_hour": 800,
+        "total_labour_minutes": 318
+      },
+      "rule_id": "RB-PRC-011"
+    },
+    {
+      "amount_inr": 10107,
+      "inputs": {
+        "freight_band": "ABOVE_250K",
+        "freight_rate_bps": 400,
+        "goods_after_adjustments_inr": 252670
+      },
+      "rule_id": "RB-PRC-012"
     }
   ]
 }

@@ -301,10 +301,8 @@ def _place_workstations(
         max_candidates=300,
     )
 
-    print(f"[assembler] generated {len(desk_candidates)} desk candidates")
 
     if not desk_candidates:
-        print("[assembler] no desk candidates available")
         return [], [], placement_counter
 
     # ------------------------------------------------------------------------
@@ -355,7 +353,6 @@ def _place_workstations(
         )
 
     desk_entries.sort(key=desk_rank)
-    print(f"[assembler] unique desk positions: {len(desk_entries)}")
 
     # Limit search space
     MAX_DESKS_TO_SEARCH = min(len(desk_entries), 180)
@@ -519,8 +516,21 @@ def _place_workstations(
 
         selected_chairs = []
 
+        # Bound the nested chair-assignment search so difficult rooms
+        # terminate deterministically instead of exploring an unbounded
+        # recursive search tree.
+        chair_search_nodes = 0
+        MAX_CHAIR_SEARCH_NODES = 12000
+
         def chair_search(position: int) -> Optional[List[Tuple[Placement, Any, float]]]:
-            """Recursive chair assignment search."""
+            """Recursive chair assignment search with a deterministic node bound."""
+            nonlocal chair_search_nodes
+
+            chair_search_nodes += 1
+
+            if chair_search_nodes > MAX_CHAIR_SEARCH_NODES:
+                return None
+
             if position == len(order):
                 return list(selected_chairs)
 
@@ -532,6 +542,13 @@ def _place_workstations(
                 chosen_for_desk: List[Tuple[Placement, Any, float]],
             ) -> Optional[List[Tuple[Placement, Any, float]]]:
                 """Choose chairs for a specific desk."""
+                nonlocal chair_search_nodes
+
+                chair_search_nodes += 1
+
+                if chair_search_nodes > MAX_CHAIR_SEARCH_NODES:
+                    return None
+
                 if len(chosen_for_desk) == required:
                     result = chair_search(position + 1)
                     if result is not None:
@@ -545,6 +562,11 @@ def _place_workstations(
                     return None
 
                 for index in range(candidate_index, len(candidates)):
+                    chair_search_nodes += 1
+
+                    if chair_search_nodes > MAX_CHAIR_SEARCH_NODES:
+                        return None
+
                     chair, chair_fp, _ = candidates[index]
 
                     # Check conflicts with selected chairs
@@ -641,22 +663,17 @@ def _place_workstations(
 
     # Execute search
     result = search_desks(0, [])
-    print(f"[assembler] constructive desk search checked {search_nodes} nodes")
 
     if result is None:
-        print("[assembler] no complete workstation arrangement found")
         return [], [], placement_counter
 
     selected_desks, selected_chairs = result
 
-    print("[assembler] workstation arrangement found")
 
     # Diagnostics
     for number, entry in enumerate(selected_desks, 1):
         desk = entry["desk"]
-        print(f"  D{number}: x={desk.x_mm} | y={desk.y_mm} | rotation={desk.rotation_deg}")
 
-    print(f"[assembler] chairs assigned: {len(selected_chairs)}")
 
     # ------------------------------------------------------------------------
     # Commit desks
@@ -695,7 +712,6 @@ def _place_workstations(
         placements.append(committed)
         chairs.append(committed)
 
-    print(f"[assembler] committed {len(desks)} desks + {len(chairs)} chairs")
     return desks, chairs, counter
 
 
@@ -782,12 +798,14 @@ def assemble_layout(
     desks = []
     chairs = []
 
-    if (
+    workstations_attempted = (
         requested_desks > 0
         and requested_chairs > 0
         and desk_product is not None
         and chair_product is not None
-    ):
+    )
+
+    if workstations_attempted:
         desks, chairs, placement_counter = _place_workstations(
             room=room,
             desk_product=desk_product,
@@ -807,11 +825,14 @@ def assemble_layout(
     # Workstation quantity reporting
     # ------------------------------------------------------------------------
 
-    if len(desks) < requested_desks:
-        unresolved_families.append("desk")
+    if workstations_attempted:
+        if len(desks) < requested_desks:
+            unresolved_families.append("desk")
 
-    if len(chairs) < requested_chairs:
-        unresolved_families.append("chair")
+        if len(chairs) < requested_chairs:
+            unresolved_families.append("chair")
+    elif requested_desks > 0:
+        unresolved_families.append("desk")
 
     # ------------------------------------------------------------------------
     # Remaining furniture
@@ -820,7 +841,8 @@ def assemble_layout(
     remaining_requirements = [
         requirement
         for requirement in requirements.furniture
-        if requirement.family not in {"desk", "chair"}
+        if requirement.family != "desk"
+        and not (requirement.family == "chair" and workstations_attempted)
     ]
 
     family_priority = {

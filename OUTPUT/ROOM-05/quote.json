@@ -1,48 +1,150 @@
 {
   "blocking_reasons": [
-    "Layout is not valid."
+    "The brief does not provide enough information to safely infer a quantity.",
+    "The brief does not provide enough information to safely infer a quantity."
   ],
   "currency": "INR",
   "lines": [
     {
+      "base_amount_inr": 232650,
+      "finish_id": "F02",
+      "finish_uplift_inr": 5816,
       "line_id": "LINE-0001",
-      "net_goods_inr": 26915,
-      "quantity": 1,
+      "net_goods_inr": 222180,
+      "quantity": 18,
+      "quantity_discount_inr": 16286,
+      "sku": "NW-CHA-006",
+      "trace": [
+        {
+          "amount_inr": 232650,
+          "inputs": {
+            "quantity": 18,
+            "unit_price": 12925
+          },
+          "rule_id": "CATALOG"
+        },
+        {
+          "amount_inr": 5816,
+          "inputs": {
+            "base_amount_inr": 232650,
+            "uplift_bps": 250
+          },
+          "rule_id": "RB-PRC-010"
+        },
+        {
+          "amount_inr": -16286,
+          "inputs": {
+            "base_amount_inr": 232650,
+            "discount_bps": 700
+          },
+          "rule_id": "RB-PRC-009"
+        }
+      ],
+      "unit_list_price_inr": 12925
+    },
+    {
+      "base_amount_inr": 53830,
+      "finish_id": "F02",
+      "finish_uplift_inr": 1346,
+      "line_id": "LINE-0002",
+      "net_goods_inr": 55176,
+      "quantity": 2,
+      "quantity_discount_inr": 0,
       "sku": "NW-COL-002",
-      "trace": {
-        "calculation": "1 \u00d7 26915 = 26915",
-        "method": "committed_placement_catalog_price",
-        "placement_id": "P-0001",
-        "sku": "NW-COL-002"
-      },
+      "trace": [
+        {
+          "amount_inr": 53830,
+          "inputs": {
+            "quantity": 2,
+            "unit_price": 26915
+          },
+          "rule_id": "CATALOG"
+        },
+        {
+          "amount_inr": 1346,
+          "inputs": {
+            "base_amount_inr": 53830,
+            "uplift_bps": 250
+          },
+          "rule_id": "RB-PRC-010"
+        },
+        {
+          "amount_inr": 0,
+          "inputs": {
+            "base_amount_inr": 53830,
+            "discount_bps": 0
+          },
+          "rule_id": "RB-PRC-009"
+        }
+      ],
       "unit_list_price_inr": 26915
     },
     {
-      "line_id": "LINE-0002",
-      "net_goods_inr": 26915,
-      "quantity": 1,
-      "sku": "NW-COL-002",
-      "trace": {
-        "calculation": "1 \u00d7 26915 = 26915",
-        "method": "committed_placement_catalog_price",
-        "placement_id": "P-0002",
-        "sku": "NW-COL-002"
-      },
-      "unit_list_price_inr": 26915
+      "base_amount_inr": 285360,
+      "finish_id": "F02",
+      "finish_uplift_inr": 7134,
+      "line_id": "LINE-0003",
+      "net_goods_inr": 272519,
+      "quantity": 12,
+      "quantity_discount_inr": 19975,
+      "sku": "NW-DES-009",
+      "trace": [
+        {
+          "amount_inr": 285360,
+          "inputs": {
+            "quantity": 12,
+            "unit_price": 23780
+          },
+          "rule_id": "CATALOG"
+        },
+        {
+          "amount_inr": 7134,
+          "inputs": {
+            "base_amount_inr": 285360,
+            "uplift_bps": 250
+          },
+          "rule_id": "RB-PRC-010"
+        },
+        {
+          "amount_inr": -19975,
+          "inputs": {
+            "base_amount_inr": 285360,
+            "discount_bps": 700
+          },
+          "rule_id": "RB-PRC-009"
+        }
+      ],
+      "unit_list_price_inr": 23780
     }
   ],
   "quote_id": "QUOTE-ROOM-05",
   "room_id": "ROOM-05",
   "status": "blocked",
   "summary": {
-    "freight_inr": 0,
-    "grand_total_inr": 53830,
-    "labour_inr": 0
+    "freight_inr": 21995,
+    "goods_after_adjustments_inr": 549875,
+    "grand_total_inr": 579820,
+    "labour_inr": 7950,
+    "labour_minutes": 636,
+    "labour_rate_inr_per_hour": 750
   },
   "summary_trace": [
     {
-      "description": "Quote generated deterministically from committed catalog placements.",
-      "method": "deterministic_catalog_sum"
+      "amount_inr": 7950,
+      "inputs": {
+        "labour_rate_inr_per_hour": 750,
+        "total_labour_minutes": 636
+      },
+      "rule_id": "RB-PRC-011"
+    },
+    {
+      "amount_inr": 21995,
+      "inputs": {
+        "freight_band": "ABOVE_250K",
+        "freight_rate_bps": 400,
+        "goods_after_adjustments_inr": 549875
+      },
+      "rule_id": "RB-PRC-012"
     }
   ]
 }

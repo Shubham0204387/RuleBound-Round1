@@ -140,6 +140,286 @@ def _restricted_zone_violation(
     if overlap_area <= 0:
         return None
 
+    # --------------------------------------------------------
+    # RB-GEO-001
+    # Walkway receives executable directional
+    # repair vectors.
+    # --------------------------------------------------------
+
+    if rule_id == "RB-GEO-001":
+
+        placement_footprint = get_product_footprint(
+            placement,
+            catalog,
+        )
+
+        repair_options = [
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement left outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.90,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": int(
+                        zone.x_mm
+                        - placement_footprint.right
+                    ),
+                    "dy_mm": 0,
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement right outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.89,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": int(
+                        zone.right_mm
+                        - placement_footprint.left
+                    ),
+                    "dy_mm": 0,
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement down outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.88,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        zone.y_mm
+                        - placement_footprint.top
+                    ),
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement up outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.87,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        zone.bottom_mm
+                        - placement_footprint.bottom
+                    ),
+                },
+            ),
+        ]
+
+    # --------------------------------------------------------
+    # RB-GEO-002
+    # Egress receives executable directional
+    # repair vectors.
+    # --------------------------------------------------------
+
+    elif rule_id == "RB-GEO-002":
+
+        placement_footprint = get_product_footprint(
+            placement,
+            catalog,
+        )
+
+        repair_options = [
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement left outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.90,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": int(
+                        zone.x_mm
+                        - placement_footprint.right
+                    ),
+                    "dy_mm": 0,
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement right outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.89,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": int(
+                        zone.right_mm
+                        - placement_footprint.left
+                    ),
+                    "dy_mm": 0,
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement down outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.88,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        zone.y_mm
+                        - placement_footprint.top
+                    ),
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement up outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.87,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        zone.bottom_mm
+                        - placement_footprint.bottom
+                    ),
+                },
+            ),
+        ]
+
+    # --------------------------------------------------------
+    # RB-GEO-003
+    # Door swing receives executable directional
+    # repair vectors.
+    # --------------------------------------------------------
+
+    elif rule_id == "RB-GEO-003":
+
+        placement_footprint = get_product_footprint(
+            placement,
+            catalog,
+        )
+
+        repair_options = [
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement left outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.90,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": int(
+                        zone.x_mm
+                        - placement_footprint.right
+                    ),
+                    "dy_mm": 0,
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement right outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.89,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": int(
+                        zone.right_mm
+                        - placement_footprint.left
+                    ),
+                    "dy_mm": 0,
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement down outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.88,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        zone.y_mm
+                        - placement_footprint.top
+                    ),
+                },
+            ),
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement up outside "
+                    f"the {zone.zone_type}."
+                ),
+                score=0.87,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "zone_id":
+                        zone.zone_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        zone.bottom_mm
+                        - placement_footprint.bottom
+                    ),
+                },
+            ),
+        ]
+
+    else:
+
+        repair_options = []
+
     return Violation(
         violation_id=violation_id,
         rule_id=rule_id,
@@ -157,22 +437,7 @@ def _restricted_zone_violation(
             "clearance_mm":
                 required_value
         },
-        repair_options=[
-            RepairOption(
-                action="move",
-                description=(
-                    "Move the placement outside "
-                    f"the {zone.zone_type}."
-                ),
-                score=0.9,
-                parameters={
-                    "placement_id":
-                        placement.placement_id,
-                    "zone_id":
-                        zone.zone_id,
-                },
-            )
-        ],
+        repair_options=repair_options,
     )
 
 
@@ -195,6 +460,133 @@ def _validate_inside_room(
     ):
         return None
 
+    footprint = get_product_footprint(
+        placement,
+        catalog,
+    )
+
+    min_x = min(
+        point[0]
+        for point in room.boundary_mm
+    )
+
+    max_x = max(
+        point[0]
+        for point in room.boundary_mm
+    )
+
+    min_y = min(
+        point[1]
+        for point in room.boundary_mm
+    )
+
+    max_y = max(
+        point[1]
+        for point in room.boundary_mm
+    )
+
+    repair_options = []
+
+    # --------------------------------------------------------
+    # Move right if footprint crosses left boundary.
+    # --------------------------------------------------------
+
+    if footprint.left < min_x:
+
+        repair_options.append(
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement right "
+                    "inside the room boundary."
+                ),
+                score=0.95,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "dx_mm": int(
+                        min_x - footprint.left
+                    ),
+                    "dy_mm": 0,
+                },
+            )
+        )
+
+    # --------------------------------------------------------
+    # Move left if footprint crosses right boundary.
+    # --------------------------------------------------------
+
+    if footprint.right > max_x:
+
+        repair_options.append(
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement left "
+                    "inside the room boundary."
+                ),
+                score=0.94,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "dx_mm": int(
+                        max_x - footprint.right
+                    ),
+                    "dy_mm": 0,
+                },
+            )
+        )
+
+    # --------------------------------------------------------
+    # Move up if footprint crosses bottom boundary.
+    # --------------------------------------------------------
+
+    if footprint.bottom < min_y:
+
+        repair_options.append(
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement up "
+                    "inside the room boundary."
+                ),
+                score=0.93,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        min_y - footprint.bottom
+                    ),
+                },
+            )
+        )
+
+    # --------------------------------------------------------
+    # Move down if footprint crosses top boundary.
+    # --------------------------------------------------------
+
+    if footprint.top > max_y:
+
+        repair_options.append(
+            RepairOption(
+                action="move",
+                description=(
+                    "Move the placement down "
+                    "inside the room boundary."
+                ),
+                score=0.92,
+                parameters={
+                    "placement_id":
+                        placement.placement_id,
+                    "dx_mm": 0,
+                    "dy_mm": int(
+                        max_y - footprint.top
+                    ),
+                },
+            )
+        )
+
     return Violation(
         violation_id=violation_id,
         rule_id="RB-GEO-007",
@@ -211,20 +603,7 @@ def _validate_inside_room(
         required={
             "inside_room": True
         },
-        repair_options=[
-            RepairOption(
-                action="move",
-                description=(
-                    "Move the placement fully "
-                    "inside the room boundary."
-                ),
-                score=0.95,
-                parameters={
-                    "placement_id":
-                        placement.placement_id,
-                },
-            )
-        ],
+        repair_options=repair_options,
     )
 
 
@@ -439,15 +818,8 @@ def _validate_desk_rear_clearance(
         ):
             continue
 
-        # IMPORTANT:
         # The 900 mm occupied-desk clearance
         # is checked against task chairs only.
-        #
-        # We do NOT check:
-        # desk ↔ desk
-        # desk ↔ storage
-        # desk ↔ collaboration
-        # desk ↔ accessory
         if (
             _product_family(
                 other,
@@ -487,6 +859,85 @@ def _validate_desk_rear_clearance(
         ):
             continue
 
+        # --------------------------------------------------------
+        # Determine the clearance deficit.
+        # --------------------------------------------------------
+
+        deficit = int(
+            DESK_REAR_CLEARANCE_MM
+            - clearance
+        )
+
+        horizontal_gap = max(
+            second_rect.left - first_rect.right,
+            first_rect.left - second_rect.right,
+            0,
+        )
+
+        vertical_gap = max(
+            second_rect.bottom - first_rect.top,
+            first_rect.bottom - second_rect.top,
+            0,
+        )
+
+        # Deterministic vectors for BOTH possible repair targets.
+        desk_dx = 0
+        desk_dy = 0
+        chair_dx = 0
+        chair_dy = 0
+
+        # --------------------------------------------------------
+        # Horizontal separation.
+        # --------------------------------------------------------
+
+        if (
+            horizontal_gap > 0
+            and (
+                vertical_gap == 0
+                or horizontal_gap <= vertical_gap
+            )
+        ):
+
+            # Chair is to the right of the desk.
+            if (
+                second_rect.left
+                > first_rect.right
+            ):
+                desk_dx = -deficit
+                chair_dx = deficit
+
+            # Chair is to the left of the desk.
+            else:
+                desk_dx = deficit
+                chair_dx = -deficit
+
+        # --------------------------------------------------------
+        # Vertical separation.
+        # --------------------------------------------------------
+
+        elif vertical_gap > 0:
+
+            # Chair is below the desk.
+            if (
+                second_rect.bottom
+                > first_rect.top
+            ):
+                desk_dy = -deficit
+                chair_dy = deficit
+
+            # Chair is above the desk.
+            else:
+                desk_dy = deficit
+                chair_dy = -deficit
+
+        # --------------------------------------------------------
+        # Deterministic fallback.
+        # --------------------------------------------------------
+
+        else:
+            desk_dy = -deficit
+            chair_dy = deficit
+
         return Violation(
             violation_id=violation_id,
             rule_id="RB-GEO-004",
@@ -508,21 +959,51 @@ def _validate_desk_rear_clearance(
                     DESK_REAR_CLEARANCE_MM
             },
             repair_options=[
+                # ------------------------------------------------
+                # OPTION 1: MOVE DESK
+                # ------------------------------------------------
                 RepairOption(
                     action="move",
                     description=(
-                        "Move the desk or chair "
-                        "to provide 900 mm "
-                        "rear clearance."
+                        "Move the desk away from "
+                        "the paired chair to provide "
+                        "900 mm rear clearance."
                     ),
                     score=0.85,
                     parameters={
                         "placement_id":
                             placement.placement_id,
+                        "dx_mm":
+                            desk_dx,
+                        "dy_mm":
+                            desk_dy,
                         "required_clearance_mm":
                             DESK_REAR_CLEARANCE_MM,
                     },
-                )
+                ),
+
+                # ------------------------------------------------
+                # OPTION 2: MOVE CHAIR
+                # ------------------------------------------------
+                RepairOption(
+                    action="move",
+                    description=(
+                        "Move the paired chair away "
+                        "from the desk to provide "
+                        "900 mm rear clearance."
+                    ),
+                    score=0.84,
+                    parameters={
+                        "placement_id":
+                            other.placement_id,
+                        "dx_mm":
+                            chair_dx,
+                        "dy_mm":
+                            chair_dy,
+                        "required_clearance_mm":
+                            DESK_REAR_CLEARANCE_MM,
+                    },
+                ),
             ],
         )
 
@@ -591,6 +1072,91 @@ def _validate_chair_pull_out(
         ):
             continue
 
+        # --------------------------------------------------------
+        # Determine the clearance deficit.
+        #
+        # The repair moves the chair farther away from
+        # the paired desk along the axis that currently
+        # determines the measured clearance.
+        #
+        # If both axes have positive separation, the
+        # smaller gap is the controlling axis, matching
+        # _axis_clearance().
+        # --------------------------------------------------------
+
+        deficit = int(
+            CHAIR_PULL_OUT_MM
+            - clearance
+        )
+
+        horizontal_gap = max(
+            desk_rect.left - chair_rect.right,
+            chair_rect.left - desk_rect.right,
+            0,
+        )
+
+        vertical_gap = max(
+            desk_rect.bottom - chair_rect.top,
+            chair_rect.bottom - desk_rect.top,
+            0,
+        )
+
+        chair_dx = 0
+        chair_dy = 0
+
+        # --------------------------------------------------------
+        # Horizontal clearance is the controlling axis.
+        # --------------------------------------------------------
+
+        if (
+            horizontal_gap > 0
+            and (
+                vertical_gap == 0
+                or horizontal_gap <= vertical_gap
+            )
+        ):
+
+            # Chair is to the right of the desk.
+            if (
+                chair_rect.left
+                > desk_rect.right
+            ):
+                chair_dx = deficit
+
+            # Chair is to the left of the desk.
+            else:
+                chair_dx = -deficit
+
+        # --------------------------------------------------------
+        # Vertical clearance is the controlling axis.
+        # --------------------------------------------------------
+
+        elif vertical_gap > 0:
+
+            # Chair is below the desk.
+            if (
+                chair_rect.bottom
+                > desk_rect.top
+            ):
+                chair_dy = deficit
+
+            # Chair is above the desk.
+            else:
+                chair_dy = -deficit
+
+        # --------------------------------------------------------
+        # Deterministic fallback.
+        #
+        # This branch should only occur for a non-overlapping
+        # pair where the measured clearance is below the
+        # requirement but neither axis has positive separation.
+        # Overlap itself is handled by RB-GEO-006.
+        # --------------------------------------------------------
+
+        else:
+
+            chair_dy = deficit
+
         return Violation(
             violation_id=violation_id,
             rule_id="RB-GEO-008",
@@ -614,13 +1180,18 @@ def _validate_chair_pull_out(
                 RepairOption(
                     action="move",
                     description=(
-                        "Move the chair to provide "
+                        "Move the chair away from "
+                        "the paired desk to provide "
                         "a 750 mm pull-out zone."
                     ),
                     score=0.85,
                     parameters={
                         "placement_id":
                             placement.placement_id,
+                        "dx_mm":
+                            chair_dx,
+                        "dy_mm":
+                            chair_dy,
                         "required_clearance_mm":
                             CHAIR_PULL_OUT_MM,
                     },

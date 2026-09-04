@@ -1,6 +1,8 @@
 {
   "blocking_reasons": [
-    "Layout is not valid."
+    "Not all required 'desk' items could be placed within the available room geometry while satisfying spatial constraints.",
+    "Not all required 'chair' items could be placed within the available room geometry while satisfying spatial constraints.",
+    "The brief does not provide enough information to safely infer a quantity."
   ],
   "currency": "INR",
   "lines": [],
@@ -8,14 +10,30 @@
   "room_id": "ROOM-04",
   "status": "blocked",
   "summary": {
-    "freight_inr": 0,
-    "grand_total_inr": 0,
-    "labour_inr": 0
+    "freight_inr": 5000,
+    "goods_after_adjustments_inr": 0,
+    "grand_total_inr": 5000,
+    "labour_inr": 0,
+    "labour_minutes": 0,
+    "labour_rate_inr_per_hour": 900
   },
   "summary_trace": [
     {
-      "description": "Quote generated deterministically from committed catalog placements.",
-      "method": "deterministic_catalog_sum"
+      "amount_inr": 0,
+      "inputs": {
+        "labour_rate_inr_per_hour": 900,
+        "total_labour_minutes": 0
+      },
+      "rule_id": "RB-PRC-011"
+    },
+    {
+      "amount_inr": 5000,
+      "inputs": {
+        "freight_band": "UP_TO_100K",
+        "freight_rate_bps": null,
+        "goods_after_adjustments_inr": 0
+      },
+      "rule_id": "RB-PRC-012"
     }
   ]
 }

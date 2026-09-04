@@ -1,25 +1,315 @@
 {
+  "escalation": null,
   "placements": [
     {
-      "finish_id": "F01",
+      "finish_id": "F02",
       "paired_desk_id": null,
       "placement_id": "P-0001",
       "rotation_deg": 0,
-      "sku": "NW-COL-002",
+      "sku": "NW-DES-009",
       "x_mm": 1200,
       "y_mm": 600
     },
     {
-      "finish_id": "F01",
+      "finish_id": "F02",
       "paired_desk_id": null,
       "placement_id": "P-0002",
       "rotation_deg": 0,
-      "sku": "NW-COL-002",
-      "x_mm": 3000,
+      "sku": "NW-DES-009",
+      "x_mm": 2400,
       "y_mm": 600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0003",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 3600,
+      "y_mm": 600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0004",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 4800,
+      "y_mm": 600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0005",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 6000,
+      "y_mm": 600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0006",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 1200,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0007",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 2400,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0008",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 3600,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0009",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 4800,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0010",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 6000,
+      "y_mm": 1500
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0011",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 4200,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0012",
+      "rotation_deg": 0,
+      "sku": "NW-DES-009",
+      "x_mm": 6600,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0013",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3040,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0014",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3640,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0015",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 5440,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0016",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 6040,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0017",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1240,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0018",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1840,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0019",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 490,
+      "y_mm": 340
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0020",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 2440,
+      "y_mm": 2400
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0021",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 7350,
+      "y_mm": 340
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0022",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 7350,
+      "y_mm": 940
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0023",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1240,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0024",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 1840,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0025",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 2440,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0026",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3040,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0027",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 7350,
+      "y_mm": 1540
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0028",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 5440,
+      "y_mm": 3000
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0029",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 3640,
+      "y_mm": 3900
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0030",
+      "rotation_deg": 0,
+      "sku": "NW-CHA-006",
+      "x_mm": 6040,
+      "y_mm": 3900
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0031",
+      "rotation_deg": 0,
+      "sku": "NW-COL-002",
+      "x_mm": 1200,
+      "y_mm": 3600
+    },
+    {
+      "finish_id": "F02",
+      "paired_desk_id": null,
+      "placement_id": "P-0032",
+      "rotation_deg": 90,
+      "sku": "NW-COL-002",
+      "x_mm": 4200,
+      "y_mm": 3300
     }
   ],
   "room_id": "ROOM-05",
   "status": "unsatisfiable",
-  "violations": []
+  "violations": [
+    {
+      "affected_placement_ids": [],
+      "measured": {},
+      "message": "The brief does not provide enough information to safely infer a quantity.",
+      "repair_options": [],
+      "required": {},
+      "rule_id": "RB-REQ-001",
+      "violation_id": "V-UNRESOLVED-STORAGE"
+    },
+    {
+      "affected_placement_ids": [],
+      "measured": {},
+      "message": "The brief does not provide enough information to safely infer a quantity.",
+      "repair_options": [],
+      "required": {},
+      "rule_id": "RB-REQ-001",
+      "violation_id": "V-UNRESOLVED-ACCESSORY"
+    }
+  ]
 }

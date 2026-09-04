@@ -1,6 +1,35 @@
 {
+  "escalation": null,
   "placements": [],
   "room_id": "ROOM-04",
   "status": "unsatisfiable",
-  "violations": []
+  "violations": [
+    {
+      "affected_placement_ids": [],
+      "measured": {},
+      "message": "Not all required 'desk' items could be placed within the available room geometry while satisfying spatial constraints.",
+      "repair_options": [],
+      "required": {},
+      "rule_id": "RB-REQ-001",
+      "violation_id": "V-UNRESOLVED-DESK"
+    },
+    {
+      "affected_placement_ids": [],
+      "measured": {},
+      "message": "Not all required 'chair' items could be placed within the available room geometry while satisfying spatial constraints.",
+      "repair_options": [],
+      "required": {},
+      "rule_id": "RB-REQ-001",
+      "violation_id": "V-UNRESOLVED-CHAIR"
+    },
+    {
+      "affected_placement_ids": [],
+      "measured": {},
+      "message": "The brief does not provide enough information to safely infer a quantity.",
+      "repair_options": [],
+      "required": {},
+      "rule_id": "RB-REQ-001",
+      "violation_id": "V-UNRESOLVED-STORAGE"
+    }
+  ]
 }

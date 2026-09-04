@@ -2,16 +2,7 @@ import json
 from pathlib import Path
 from typing import Dict, Any
 
-import yaml
-
-from app.config import (
-    CATALOG_FILE,
-    FINISHES_FILE,
-    RULES_FILE,
-    HISTORICAL_JOBS_FILE,
-    ROOMS_DIR,
-    BRIEFS_DIR,
-)
+from app.config import DATA_DIR
 
 from app.models import Product, Finish, Rule, Room, Brief
 
@@ -22,13 +13,7 @@ def load_json(file_path: Path) -> Any:
         return json.load(file)
 
 
-def load_yaml(file_path: Path) -> Any:
-    """Load and return YAML data from a file."""
-    with file_path.open("r", encoding="utf-8") as file:
-        return yaml.safe_load(file)
-
-
-def load_catalog() -> Dict[str, Product]:
+def load_catalog(data_dir: Path = DATA_DIR) -> Dict[str, Product]:
     """
     Load all products from catalog.json.
 
@@ -36,7 +21,7 @@ def load_catalog() -> Dict[str, Product]:
     dimensions_mm and prices inside list_price_inr.
     """
 
-    raw_data = load_json(CATALOG_FILE)
+    raw_data = load_json(data_dir / "catalog.json")
 
     products: Dict[str, Product] = {}
 
@@ -61,12 +46,12 @@ def load_catalog() -> Dict[str, Product]:
     return products
 
 
-def load_finishes() -> Dict[str, Finish]:
+def load_finishes(data_dir: Path = DATA_DIR) -> Dict[str, Finish]:
     """
     Load all finishes from finishes.json.
     """
 
-    raw_data = load_json(FINISHES_FILE)
+    raw_data = load_json(data_dir / "finishes.json")
 
     finishes: Dict[str, Finish] = {}
 
@@ -83,12 +68,12 @@ def load_finishes() -> Dict[str, Finish]:
     return finishes
 
 
-def load_rules() -> Dict[str, Rule]:
+def load_rules(data_dir: Path = DATA_DIR) -> Dict[str, Rule]:
     """
-    Load all rules from rules.yaml.
+    Load all rules from rules.json.
     """
 
-    raw_data = load_yaml(RULES_FILE)
+    raw_data = load_json(data_dir / "rules.json")
 
     rules: Dict[str, Rule] = {}
 
@@ -109,7 +94,7 @@ def load_rules() -> Dict[str, Rule]:
     return rules
 
 
-def load_rooms() -> Dict[str, Room]:
+def load_rooms(data_dir: Path = DATA_DIR) -> Dict[str, Room]:
     """
     Load all room JSON files.
 
@@ -120,7 +105,7 @@ def load_rooms() -> Dict[str, Room]:
 
     rooms: Dict[str, Room] = {}
 
-    for file_path in sorted(ROOMS_DIR.glob("*.json")):
+    for file_path in sorted((data_dir / "rooms").glob("*.json")):
         raw_data = load_json(file_path)
 
         room = Room(
@@ -138,7 +123,7 @@ def load_rooms() -> Dict[str, Room]:
     return rooms
 
 
-def load_briefs() -> Dict[str, Brief]:
+def load_briefs(data_dir: Path = DATA_DIR) -> Dict[str, Brief]:
     """
     Load all customer briefs from the briefs directory.
 
@@ -149,7 +134,7 @@ def load_briefs() -> Dict[str, Brief]:
 
     briefs: Dict[str, Brief] = {}
 
-    for file_path in sorted(BRIEFS_DIR.glob("*")):
+    for file_path in sorted((data_dir / "briefs").glob("*")):
         if not file_path.is_file():
             continue
 
@@ -165,7 +150,7 @@ def load_briefs() -> Dict[str, Brief]:
     return briefs
 
 
-def load_historical_jobs():
+def load_historical_jobs(data_dir: Path = DATA_DIR):
     """
     Load historical jobs.
 
@@ -173,19 +158,19 @@ def load_historical_jobs():
     they are reference data rather than active application entities.
     """
 
-    return load_json(HISTORICAL_JOBS_FILE)
+    return load_json(data_dir / "historical_jobs.json")
 
 
-def load_all_data() -> Dict[str, Any]:
+def load_all_data(data_dir: Path = DATA_DIR) -> Dict[str, Any]:
     """
     Load the complete RuleBound dataset.
     """
 
     return {
-        "catalog": load_catalog(),
-        "finishes": load_finishes(),
-        "rules": load_rules(),
-        "rooms": load_rooms(),
-        "briefs": load_briefs(),
-        "historical_jobs": load_historical_jobs(),
+        "catalog": load_catalog(data_dir),
+        "finishes": load_finishes(data_dir),
+        "rules": load_rules(data_dir),
+        "rooms": load_rooms(data_dir),
+        "briefs": load_briefs(data_dir),
+        "historical_jobs": load_historical_jobs(data_dir),
     }
