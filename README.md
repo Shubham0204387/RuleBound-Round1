@@ -140,7 +140,7 @@ Both layout and quote outputs are validated against the repository output contra
 
 ## Demonstration
 
-**Demo video:** TO BE ADDED BEFORE FINAL SUBMISSION
+**Demo video:** [Watch the RuleBound Round 3 Demo](https://drive.google.com/file/d/1Fof07yqj2pFyq_fHl9Hsy5L8aBi0PRDp/view?usp=sharing)
 
 The final demonstration link will be inserted here before submission.
 
